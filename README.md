@@ -6,4 +6,3 @@
 ###### Coroutines
 ###### View Binding
 ###### Glide
-###### Custom View
