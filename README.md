@@ -6,7 +6,4 @@
 ###### Coroutines
 ###### View Binding
 ###### Glide
-###### Base Classes 
-###### Navigation -> Pass data with safeArgs
 ###### Custom View
-###### New Splash API
