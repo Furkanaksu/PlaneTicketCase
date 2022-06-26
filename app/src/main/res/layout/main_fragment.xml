@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/dialogBg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contentTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+
+        android:padding="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:tint="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="UseAppTint" />
+
+        <TextView
+            android:id="@+id/departure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/back"
+            android:text="İstanbul"
+            android:textSize="18sp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/averta_bold"/>
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:src="@drawable/ic_arrow"
+            android:tint="@color/black"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            app:layout_constraintStart_toEndOf="@+id/departure"
+            app:layout_constraintTop_toTopOf="@+id/departure"
+            app:layout_constraintBottom_toBottomOf="@+id/departure"
+            tools:ignore="UseAppTint" />
+
+        <TextView
+            android:id="@+id/arrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/arrow"
+            app:layout_constraintTop_toTopOf="@+id/departure"
+            app:layout_constraintBottom_toBottomOf="@+id/departure"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="Amsterdam"
+            android:textSize="18sp"
+            android:fontFamily="@font/averta_bold"/>
+
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:src="@drawable/ic_edit"
+            android:tint="@color/black"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            app:layout_constraintStart_toEndOf="@+id/arrival"
+            app:layout_constraintTop_toTopOf="@+id/arrival"
+            app:layout_constraintBottom_toBottomOf="@+id/arrival"
+            tools:ignore="UseAppTint" />
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tek Yön |"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/departure"
+            app:layout_constraintTop_toBottomOf="@id/departure"
+            android:fontFamily="@font/averta_semibold"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+
+        <ImageView
+            android:id="@+id/person"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/ic_person"
+            android:tint="@color/black"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            app:layout_constraintStart_toEndOf="@+id/type"
+            app:layout_constraintTop_toTopOf="@+id/type"
+            app:layout_constraintBottom_toBottomOf="@+id/type"
+            tools:ignore="UseAppTint" />
+
+        <TextView
+            android:id="@+id/personCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            app:layout_constraintStart_toEndOf="@id/person"
+            app:layout_constraintTop_toTopOf="@id/person"
+            app:layout_constraintBottom_toBottomOf="@+id/person"
+            android:layout_marginStart="@dimen/_4sdp"/>
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_6sdp"
+            android:src="@drawable/ic_share"
+            android:tint="@color/tintColor"
+            android:background="@drawable/button_rounded"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="UseAppTint" />
+
+        <ImageView
+            android:id="@+id/favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_6sdp"
+            android:src="@drawable/ic_fav"
+            android:tint="@color/tintColor"
+            android:background="@drawable/button_rounded"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/share"
+            android:layout_marginEnd="@dimen/_5sdp"
+            tools:ignore="UseAppTint" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/contentTop"
+        android:paddingBottom="@dimen/_5sdp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/chart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chart"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:tint="@color/green"
+            android:padding="@dimen/_8sdp"
+            tools:ignore="UseAppTint"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/chart"
+            android:weightSum="3">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/averta_semibold"
+                    android:text="Önceki gün"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/averta_bold"
+                    android:text="1450 TL"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:fontFamily="@font/averta_semibold"
+                    android:textColor="@color/green"
+                    android:textSize="16sp"
+                    android:text="Önceki gün"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:textColor="@color/green"
+                    android:fontFamily="@font/averta_bold"
+                    android:text="1450 TL"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/averta_semibold"
+                    android:text="Önceki gün"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/averta_bold"
+                    android:text="1450 TL"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="7"
+        android:layout_margin="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/rounded_btn"
+            android:backgroundTint="@color/blue"
+            android:padding="@dimen/_8sdp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_sort"
+                android:layout_marginEnd="@dimen/_4sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/averta_bold"
+                android:text="Sırala"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/rounded_btn"
+            android:backgroundTint="@color/blue"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_sort"
+                android:layout_marginEnd="@dimen/_4sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/averta_bold"
+                android:text="Sırala"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/notification"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_notification"
+            android:backgroundTint="@color/notificationBlue"
+            android:background="@drawable/button_rounded"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/share"
+            android:layout_marginEnd="@dimen/_5sdp"
+            tools:ignore="UseAppTint" />
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rycView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:minHeight="@dimen/_200sdp"
+        android:paddingHorizontal="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttons"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="16dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

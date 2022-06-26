@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TicketAppCase</string>
+    <string name="Search">Arama</string>
+    <string name="error_text">İçerik Bulunamadı</string>
+    <string name="emtpy_text">Henüz Bir İçerik Aratılmadı.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title"><b>Title: </b></string>
+    <string name="author"><b>Author: </b></string>
+    <string name="musicList">Şarkı Listesi</string>
+    <string name="directFly">Direkt Uçuş</string>
+    <string name="withTransferFly">Aktarmalı Uçuş</string>
+    <string name="hand_baggage">El Bagajı</string>
+</resources>

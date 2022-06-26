@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_btn"
+    android:layout_margin="@dimen/_5sdp"
+    android:padding="@dimen/_10sdp">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/airlines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/averta_semibold"
+        android:gravity="center"
+        android:text="Hava Yolu"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/_10sdp"
+         />
+
+    <TextView
+        android:id="@+id/departure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/averta_semibold"
+        android:gravity="center"
+        android:text="SAW > AMS"
+        app:layout_constraintStart_toStartOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        android:layout_marginTop="@dimen/_10sdp"
+        />
+
+
+    <ImageView
+        android:id="@+id/nextIcon"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/price"
+        app:layout_constraintBottom_toBottomOf="@id/price"
+        android:tint="#4CAF50"
+        android:src="@drawable/ic_next"
+        tools:ignore="UseAppTint" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/averta_bold"
+        android:gravity="center"
+        android:text="Price"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/nextIcon"
+        app:layout_constraintTop_toTopOf="@id/departure"
+        android:layout_marginEnd="@dimen/_7sdp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/price"
+        app:layout_constraintStart_toEndOf="@+id/departure"
+        app:layout_constraintTop_toTopOf="@id/departure">
+
+        <TextView
+            android:id="@+id/departureTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/averta_bold"
+            android:gravity="center"
+            android:text="Time"
+            android:textSize="16sp"
+            />
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:src="@drawable/ic_arrow"
+            android:tint="@color/black"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            tools:ignore="UseAppTint" />
+
+        <TextView
+            android:id="@+id/arrivalTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Time"
+            android:layout_marginEnd="@dimen/_10sdp"
+            />
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/detailIcon"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@id/departure"
+        app:layout_constraintStart_toStartOf="@+id/departure"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/button_rounded"
+        android:src="@drawable/ic_detail"
+        android:tint="#636262"
+        tools:ignore="UseAppTint" />
+
+    <TextView
+        android:id="@+id/flyType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/averta_semibold"
+        android:gravity="center"
+        android:text="Type"
+        android:textColor="@color/green"
+        app:layout_constraintStart_toEndOf="@+id/detailIcon"
+        app:layout_constraintTop_toTopOf="@id/detailIcon"
+        app:layout_constraintBottom_toBottomOf="@+id/detailIcon"
+        android:layout_marginStart="@dimen/_10sdp"
+        />
+
+    <TextView
+        android:id="@+id/baggage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/averta_semibold"
+        android:gravity="center"
+        android:text="Baggage"
+        app:layout_constraintStart_toEndOf="@+id/flyType"
+        app:layout_constraintTop_toTopOf="@id/detailIcon"
+        app:layout_constraintBottom_toBottomOf="@+id/detailIcon"
+        android:layout_marginStart="@dimen/_20sdp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
